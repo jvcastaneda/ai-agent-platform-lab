@@ -1,5 +1,5 @@
 # AI Agent Platform Lab — Phase 1
-A minimal Node.js service with no `/health` endpoint yet. That endpoint is the first Codex assignment.
+A minimal Node.js service with a `/health` endpoint for readiness checks.
 
 ## Local
 Requires Node.js 22+.
@@ -9,7 +9,7 @@ npm test
 npm run lint
 npm start
 ```
-Visit http://localhost:3000/ . The `/health` route currently returns 404 intentionally.
+Visit http://localhost:3000/ . `GET /health` returns HTTP 200 with JSON `{"status":"ok","version":"0.1.0"}`.
 
 ## First agent issue
 **Goal:** Add `GET /health` for ECS/ALB readiness checks.
